@@ -1,0 +1,14 @@
+node
+{
+stage("Check OS")
+{
+if (isUnix())
+{
+sh "pwd"
+}
+else 
+{
+bat "dir"
+}
+}
+}
