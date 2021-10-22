@@ -1,0 +1,10 @@
+node
+{
+stage ("Check Credentials")
+{
+withCredentials([usernamePassword(credentialsId: 'tomcat_username', passwordVariable: 'Tomcat_password', usernameVariable: 'Tomcat_username')]) {
+    echo "Username is ${tomcat_username}"
+    echo "Password is ${Tomcat_password}"
+}
+}
+}
